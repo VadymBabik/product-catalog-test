@@ -1,7 +1,9 @@
+import Layout from "./components/Layout";
+
 const App = () => (
-  <div className="App">
-    <h1>Hello React!!!</h1>
-  </div>
+  <Layout>
+    <h1>Product catalog</h1>
+  </Layout>
 );
 
 export default App;
