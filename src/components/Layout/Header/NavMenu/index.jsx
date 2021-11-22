@@ -1,20 +1,29 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { getUserState } from "../../../../store/user/slice";
 
 const NavMenu = () => {
+  const { user } = useSelector(getUserState);
   return (
     <ul id="nav-mobile" className="right hide-on-med-and-down">
-      <li>
-        <span>Hello user</span>
-      </li>
-      <li>
-        <a href="/">Sing Up</a>
-      </li>
-      <li>
-        <a href="/">Log In</a>
-      </li>
-      <li>
-        <a href="/">Log Out</a>
-      </li>
+      {user?.token ? (
+        <li>
+          <a href="/">Log Out</a>
+        </li>
+      ) : (
+        <>
+          <li>
+            <a className="modal-trigger" href="#modalRegistration">
+              Sing Up
+            </a>
+          </li>
+          <li>
+            <a className="modal-trigger" href="#modalLogin">
+              Log In
+            </a>
+          </li>
+        </>
+      )}
     </ul>
   );
 };
