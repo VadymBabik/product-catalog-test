@@ -20,7 +20,7 @@ const ModalRegistration = () => {
   return (
     <div
       ref={modalRegistration}
-      style={{ width: "500px" }}
+      style={{ maxWidth: "500px" }}
       id="modalRegistration"
       className="modal"
     >
@@ -28,21 +28,21 @@ const ModalRegistration = () => {
         <h4>Registration</h4>
         <div className="row">
           <div className="input-field col s12">
-            <label htmlFor="user_name">User name</label>
+            <label htmlFor="user_nam">User name</label>
             <input
               value={username}
               onChange={(event) => setUsername(event.target.value)}
-              id="user_name"
+              id="user_nam"
               type="text"
               className="validate"
             />
           </div>
           <div className="input-field col s12">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="pasword">Password</label>
             <input
               value={password}
               onChange={(event) => setPassword(event.target.value)}
-              id="password"
+              id="pasword"
               type="password"
               className="validate"
             />

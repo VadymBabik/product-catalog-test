@@ -9,6 +9,8 @@ const api = {
   },
   product: {
     getProducts: () => axios.get(`/api/products/`),
+    sendReviews: (data, id) => axios.post(`/api/reviews/${id}`, data),
+    getReviews: (id) => axios.get(`/api/reviews/${id}`),
   },
 };
 

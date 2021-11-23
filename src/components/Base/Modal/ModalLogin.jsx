@@ -20,7 +20,7 @@ const ModalLogin = () => {
   return (
     <div
       ref={modalLogin}
-      style={{ width: "500px" }}
+      style={{ maxWidth: "500px" }}
       id="modalLogin"
       className="modal"
     >

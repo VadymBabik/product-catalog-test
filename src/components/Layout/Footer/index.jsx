@@ -2,12 +2,12 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="page-footer indigo darken-3">
-      <div className="footer-copyright center">
+    <footer className="page-footer teal accent-4">
+      <div className="footer-copyright center teal accent-4">
         <div className="container">© 2021 Product catalog</div>
       </div>
     </footer>
   );
 };
 
-export default Footer;
+export default React.memo(Footer);
